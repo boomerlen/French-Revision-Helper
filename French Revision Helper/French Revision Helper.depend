@@ -1,0 +1,18 @@
+# depslib dependency file v1.0
+1541225373 source:c:\users\hugo sebesta\documents\github\french-revision-helper\french revision helper\src\word.cpp
+	"Word.h"
+	<string>
+
+1541225340 c:\users\hugo sebesta\documents\github\french-revision-helper\french revision helper\include\word.h
+	<string>
+
+1541228484 source:c:\users\hugo sebesta\documents\github\french-revision-helper\french revision helper\main.cpp
+	<iostream>
+	<string>
+	"Word.h"
+	"Verb.h"
+
+1541228405 c:\users\hugo sebesta\documents\github\french-revision-helper\french revision helper\include\verb.h
+	<Word.h>
+	<string>
+
