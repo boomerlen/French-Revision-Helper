@@ -2,15 +2,17 @@
 // Current Functionality:
 // Add words
 // Add verbs and specify conjugations for them in present and imparfait as well as sepcifying a past participle and whether or not they use Etre in the passe compose
-// Auto conjugate regular ER verbs
+// Auto conjugate regular ER, RE and IR verbs
 // TODO:
-// Add file IO to store verb data and read for later
+// Add file IO to store verb data and read for later - Maybe SQL Database?
 // Create some sort of user interface for searching for words by definition or french word
 // Create other useful ways to organise and output words
 // Maybe implement GUI, but not until I have done everything I possibly can in CMD
+// Implement SQL Database. Refer to https://www.codeguru.com/cpp/data/database-programming-with-cc.html
 
 #include <iostream>
 #include <string>
+#include <ofstream>
 
 #include "Word.h"
 #include "Verb.h"

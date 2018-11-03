@@ -45,7 +45,40 @@ Verb::Verb(string eng, string fre, short int vtype) // Maybe someday change this
         imparfait_conjugation[ILS] = imparfaitStem.append("aient");
         break;
     case IRVERB:
+        present_conjugation[JE] = conjBase.append("is");
+        present_conjugation[TU] = conjBase.append("is");
+        present_conjugation[ON] = conjBase.append("it");
+        present_conjugation[NOUS] = conjBase.append("issons");
+        present_conjugation[VOUS] = conjBase.append("issez");
+        present_conjugation[ILS] = conjBase.append("issent");
+
+        past_participle = conjBase.append("i");
+
+        imparfaitStem = conjBase.append("iss");
+        imparfait_conjugation[JE] = imparfaitStem.append("ais");
+        imparfait_conjugation[TU] = imparfaitStem.append("ais");
+        imparfait_conjugation[ON] = imparfaitStem.append("ait");
+        imparfait_conjugation[NOUS] = imparfaitStem.append("ions");
+        imparfait_conjugation[VOUS] = imparfaitStem.append("iez");
+        imparfait_conjugation[ILS] = imparfaitStem.append("aient");
+        break;
     case REVERB:
+        present_conjugation[JE] = conjBase.append("s");
+        present_conjugation[TU] = conjBase.append("s");
+        present_conjugation[ON] = conjBase;
+        present_conjugation[NOUS] = conjBase.append("ons");
+        present_conjugation[VOUS] = conjBase.append("ez");
+        present_conjugation[ILS] = conjBase.append("ent");
+
+        past_participle = conjBase.append("u");
+
+        imparfaitStem = conjBase;
+        imparfait_conjugation[JE] = imparfaitStem.append("ais");
+        imparfait_conjugation[TU] = imparfaitStem.append("ais");
+        imparfait_conjugation[ON] = imparfaitStem.append("ait");
+        imparfait_conjugation[NOUS] = imparfaitStem.append("ions");
+        imparfait_conjugation[VOUS] = imparfaitStem.append("iez");
+        imparfait_conjugation[ILS] = imparfaitStem.append("aient");
         break;
     }
 }
