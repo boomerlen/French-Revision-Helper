@@ -11,15 +11,19 @@
 // Maybe implement GUI, but not until I have done everything I possibly can in CMD
 // Implement SQL Database. Refer to https://www.codeguru.com/cpp/data/database-programming-with-cc.html
 
+// 4/11/2018 I am midway through the SQL Server integration. I still need to set that up, set up the password encryption and make some sort of user interface.
+
 #include <stdio.h>
+#include <stdlib.h>>
 #include <string.h>
 #include <iostream>
 #include <string>
 #include <fstream>
+#include <vector>
 
 #include <tinyAES/aes.hpp>
 
-#include <jdbc/mysql_connection.h>
+#include "jdbc/mysql_connection.h"
 
 #include <jdbc/cppconn/driver.h>
 #include <jdbc/cppconn/exception.h>
@@ -31,13 +35,47 @@
 
 #define CONFIG_FILE_ADDR "config.conf"
 
+#define VERBS 0
+#define ADJECTIVES 1
+#define OTHER 2
+
 using namespace std;
+
+string serv_addr, serv_user, serv_pass; // Global Vars
+
+vector< vector<Word> > initialiseWordVector()
+{
+    // We do all connections in here for setup
+    vector< vector<Word> > wordVector;
+    try{
+        sql::Driver *driver;
+        sql::Connection *con;
+        sql::Statement *stmt;
+        sql::ResultSet *res;
+
+        driver = get_driver_instance();
+        string *base = "tcp://";
+        string *addr = base.append(serv_addr);
+        con = driver->connect(addr, serv_user, serv_pass);
+
+        con->setSchema("schema");
+
+        stmt = con->createStatement();
+        res = stmt->executeQuery("SELECT 'english' FROM 'verbs'");
+        while(res->next())
+        {
+            string something = res->getString(1);
+        }
+    }
+    delete base;
+    delete addr;
+}
 
 int main()
 {
     cout << "Hello world!" << endl;
 
-/*    Word nothing("nothing", "rien");
+/*    Word nothing("nothing", "rien"); Testing functionality code
     cout << nothing.getEng() << " is: " << nothing.getFre() << endl;
 
     Verb aller("to go", "aller", IRREGULAR);
@@ -55,8 +93,7 @@ int main()
         cout << "ERROR: confile file not found!" << endl;
         return 1;
     }
-    char serv_addr[256], serv_user[256], buf[256];
-    string serv_pass;
+    char buf[256];
     config_file.getline(buf, 256);
     if(strlen(buf) < 3)
     {
@@ -83,9 +120,13 @@ int main()
         }
     }
 
+    // Connect to database using serv_addr, serv_user and serv_pass. Use a different function to do that
+    // Take everything from it and store in vector for each class so that we can sort them easily.
+    // Words added will be stored in their own (Word) vector (as well as the the vector for its type) and then added to the database at the end (or if the user "commit"s)
+    // Words removed will be in their own vector also to be removed from the database at the end or upon commit
 
-    // Connect to database using serv_addr, serv_user and serv_pass.
-
+    vector< vector<Word> > WordList = initialiseWordVector();
+    // Split it up etc
 
     return 0;
 }
