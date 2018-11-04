@@ -24,3 +24,13 @@ Word::~Word()
 {
     //dtor
 }
+
+void Word::setComment(string com)
+{
+    comment = com;
+}
+
+string Word::getComment()
+{
+    return comment;
+}

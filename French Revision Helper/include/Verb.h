@@ -4,14 +4,6 @@
 #include <Word.h>
 #include <string>
 
-#define JE 0
-#define TU 1
-#define ON 2
-#define NOUS 3
-#define VOUS 4
-#define ILS 5
-#define INVALID 6
-
 #define ERVERB 0
 #define REVERB 1
 #define IRVERB 2

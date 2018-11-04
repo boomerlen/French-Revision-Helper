@@ -1,18 +1,30 @@
 # depslib dependency file v1.0
-1541225373 source:c:\users\hugo sebesta\documents\github\french-revision-helper\french revision helper\src\word.cpp
+1541289078 source:c:\users\hugo sebesta\documents\github\french-revision-helper\french revision helper\src\word.cpp
 	"Word.h"
 	<string>
 
-1541225340 c:\users\hugo sebesta\documents\github\french-revision-helper\french revision helper\include\word.h
+1541289047 c:\users\hugo sebesta\documents\github\french-revision-helper\french revision helper\include\word.h
 	<string>
 
-1541228484 source:c:\users\hugo sebesta\documents\github\french-revision-helper\french revision helper\main.cpp
+1541289247 source:c:\users\hugo sebesta\documents\github\french-revision-helper\french revision helper\main.cpp
 	<iostream>
 	<string>
+	<fstream>
 	"Word.h"
 	"Verb.h"
 
-1541228405 c:\users\hugo sebesta\documents\github\french-revision-helper\french revision helper\include\verb.h
+1541288715 c:\users\hugo sebesta\documents\github\french-revision-helper\french revision helper\include\verb.h
+	<Word.h>
+	<string>
+
+1541243658 source:c:\users\hugo sebesta\documents\github\french-revision-helper\french revision helper\src\verb.cpp
+	"Verb.h"
+	<string>
+
+1541289501 source:c:\users\hugo sebesta\documents\github\french-revision-helper\french revision helper\src\adjective.cpp
+	"Adjective.h"
+
+1541289373 c:\users\hugo sebesta\documents\github\french-revision-helper\french revision helper\include\adjective.h
 	<Word.h>
 	<string>
 
