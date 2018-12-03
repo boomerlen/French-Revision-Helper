@@ -49,10 +49,12 @@
 			<Add option="-fexceptions" />
 		</Compiler>
 		<Unit filename="include/Adjective.h" />
+		<Unit filename="include/Rule.h" />
 		<Unit filename="include/Verb.h" />
 		<Unit filename="include/Word.h" />
 		<Unit filename="main.cpp" />
 		<Unit filename="src/Adjective.cpp" />
+		<Unit filename="src/Rule.cpp" />
 		<Unit filename="src/Verb.cpp" />
 		<Unit filename="src/Word.cpp" />
 		<Extensions>
