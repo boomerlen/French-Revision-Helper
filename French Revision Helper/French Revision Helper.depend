@@ -28,3 +28,56 @@
 	<Word.h>
 	<string>
 
+1546588042 source:d:\documents again\github\french-revision-helper\french revision helper\french revision helper\main.cpp
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<iostream>
+	<string>
+	<fstream>
+	<vector>
+	<tinyAES/aes.hpp>
+	"jdbc/mysql_connection.h"
+	<jdbc/cppconn/driver.h>
+	<jdbc/cppconn/exception.h>
+	<jdbc/cppconn/resultset.h>
+	<jdbc/cppconn/statement.h>
+	"Word.h"
+	"Verb.h"
+	"Adjective.h"
+	"Rule.h"
+
+1537738510 d:\c libs\tinyaes\aes.hpp
+	"aes.h"
+
+1537738510 d:\c libs\tinyaes\aes.h
+	<stdint.h>
+
+1546588042 d:\documents again\github\french-revision-helper\french revision helper\french revision helper\include\word.h
+	<string>
+
+1546588042 d:\documents again\github\french-revision-helper\french revision helper\french revision helper\include\verb.h
+	<Word.h>
+	<string>
+
+1546588042 d:\documents again\github\french-revision-helper\french revision helper\french revision helper\include\adjective.h
+	<Word.h>
+	<string>
+
+1546588042 d:\documents again\github\french-revision-helper\french revision helper\french revision helper\include\rule.h
+	<string>
+
+1546588042 source:d:\documents again\github\french-revision-helper\french revision helper\french revision helper\src\adjective.cpp
+	"Adjective.h"
+
+1546588042 source:d:\documents again\github\french-revision-helper\french revision helper\french revision helper\src\verb.cpp
+	"Verb.h"
+	<string>
+
+1546588042 source:d:\documents again\github\french-revision-helper\french revision helper\french revision helper\src\word.cpp
+	"Word.h"
+	<string>
+
+1546588156 source:d:\documents again\github\french-revision-helper\french revision helper\french revision helper\src\rule.cpp
+	"Rule.h"
+

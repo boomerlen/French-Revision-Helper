@@ -23,12 +23,12 @@ std::string Rule::get_rule()
     return rule;
 }
 
-void Rule::set_name(std::string n)
+int Rule::set_name(std::string n)
 {
     name = n;
 }
 
-void Rule::set_rule(std::rule r)
+int Rule::set_rule(std::string r)
 {
     rule = r;
 }

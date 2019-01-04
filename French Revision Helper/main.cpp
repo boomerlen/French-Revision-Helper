@@ -23,7 +23,7 @@
 
 #include <tinyAES/aes.hpp>
 
-#include "jdbc/mysql_connection.h"
+#include <jdbc/mysql_connection.h>
 
 #include <jdbc/cppconn/driver.h>
 #include <jdbc/cppconn/exception.h>
@@ -43,7 +43,7 @@
 
 using namespace std;
 
-string CONFIG_FILE_ADDR "config.conf";
+string CONFIG_FILE_ADDR = "config.conf";
 
 string serv_addr, serv_user, serv_pass; // Global Vars
 
